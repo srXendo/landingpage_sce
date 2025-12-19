@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Events - Landing Page</title>
+    <style>
+        :root {
+            --primary-brown: #a67c5d;
+            --dark-brown: #7a5a41;
+            --bg-cream: #fdfaf3;
+            --text-color: #3e2723;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: var(--primary-brown);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo { font-weight: bold; font-size: 1.2rem; }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+        }
+
+        .auth-buttons button {
+            padding: 8px 18px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .btn-login { background: white; color: var(--primary-brown); }
+        .btn-signup { background: #333; color: white; }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--bg-cream);
+        }
+
+        header h1 { font-size: 3rem; margin-bottom: 0; color: var(--dark-brown); }
+        header p { font-size: 1.2rem; opacity: 0.8; }
+
+        /* Main Content */
+        .container {
+            background-color: var(--primary-brown);
+            color: white;
+            padding: 60px 10%;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .section:nth-child(even) { flex-direction: row-reverse; }
+
+        .content-text { flex: 1; }
+        .content-image { flex: 1; }
+
+        .content-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Grid Icons / Rewards */
+        .rewards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .reward-item { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-brown);
+            color: #d7ccc8;
+            padding: 40px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+        }
+
+        footer h4 { color: white; margin-bottom: 15px; }
+        footer ul { list-style: none; padding: 0; }
+        footer li { margin-bottom: 8px; font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            .section { flex-direction: column !important; text-align: center; }
+            .rewards-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CHESS EVENTS</div>
+        <div class="nav-links">
+            <a href="#">Products</a>
+            <a href="#">Community</a>
+            <a href="#">Resources</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="auth-buttons">
+            <button class="btn-login">Sign In</button>
+            <button class="btn-signup">Register</button>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Chess Events</h1>
+        <p>Presencial and digital players</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="section">
+            <div class="content-image">
+                <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf95818d?auto=format&fit=crop&w=800&q=80" alt="Gente jugando ajedrez">
+            </div>
+            <div class="content-text">
+                <h2>Juega presencialmente sin complicaciones</h2>
+                <p>Apúntate a una partida SCE y vive el ajedrez cara a cara con una experiencia moderna, fluida y totalmente conectada.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="content-image">
+                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="Mapa de eventos">
+            </div>
+            <div class="content-text">
+                <h2>Únete a partidas desde Google Maps</h2>
+                <p>Explora los puntos SCE cercanos, descubre partidas disponibles en tiempo real y únete con un solo toque. El ajedrez sale a la calle contigo.</p>
+            </div>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 60px 0;">
+
+        <h2 style="text-align: center;">Gana logros y recompensas únicas</h2>
+        <div class="rewards-grid">
+            <div class="reward-item">
+                <strong>🏆 Nivel Pro</strong>
+                <p>Desbloquea medallas exclusivas.</p>
+            </div>
+            <div class="reward-item">
+                <strong>🌍 Global</strong>
+                <p>Compite en el ranking mundial.</p>
+            </div>
+            <div class="reward-item">
+                <strong>🤝 Comunidad</strong>
+                <p>Conecta con otros maestros.</p>
+            </div>
+            <div class="reward-item">
+                <strong>📍 Local</strong>
+                <p>Gana torneos en tu ciudad.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <h4>User Flows</h4>
+            <ul>
+                <li>UI Design</li>
+                <li>UX Design</li>
+                <li>Wireframing</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Explore</h4>
+            <ul>
+                <li>Design</li>
+                <li>Prototyping</li>
+                <li>Features</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Resources</h4>
+            <ul>
+                <li>Blog</li>
+                <li>Best Practices</li>
+                <li>Support</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Chess SCE</h4>
+            <p>La red social definitiva para jugadores de ajedrez modernos.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
